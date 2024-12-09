@@ -39,7 +39,8 @@ def select_effect():
                 print("Socket mode selected")
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Allow immediate reuse of the socket
-                s.bind(('192.168.1.18', 12345))
+                # s.bind(('192.168.1.18', 12345))
+                s.bind(('0.0.0.0', 12345))
                 s.listen(10)
                 conn, addr = s.accept()
                 print(f"Connection from {addr}")
