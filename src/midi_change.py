@@ -26,9 +26,9 @@ device.set_configuration()
 
 effects = JSON.get_json("../effects.json")
 
-last_effect = "0"
 # Listen for outgoing communication and send the selected command
 def select_effect():
+    last_effect = "0"
     while True:
         try:
             effect = input("Enter the index/name to select an effect ('q' to quit, 'h' for help): ")
