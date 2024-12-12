@@ -70,9 +70,9 @@ def select_effect():
                 continue
 
             effect = str(int(effect) - 1)
-            last_effect = effect
             effect_command = effects[effect]
             send_effect(effect, effect_command)
+            last_effect = effect
         except usb.core.USBError as e:
             print(f"USB Error: {e}")
             break
