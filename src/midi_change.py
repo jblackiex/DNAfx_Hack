@@ -24,7 +24,7 @@ if device.is_kernel_driver_active(0):
 device.set_configuration()
 
 
-effects = JSON.get_json("../effects.json")
+effects = JSON.get_json("effects.json")
 
 # Listen for outgoing communication and send the selected command
 def select_effect():
@@ -35,6 +35,9 @@ def select_effect():
             if effect.lower() == 'q':
                 print("Exiting...")
                 break
+            if effect.lower() == 'aux':
+                print("Aux mode selected")
+                effect = input("Enter the effect index/name to select: ")
             if effect.lower() == 's': # Socket mode
                 print("Socket mode selected")
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

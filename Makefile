@@ -9,6 +9,19 @@ NC=\033[0m # No Color
 
 # DNAfx
 # HID device access
+
+DNAfx:
+	@echo "${GREEN}DNAfx${NC}"
+	$(SUDO) python3 src/midi_change.py
+
+DNAfx_extract_from_loop_wav:
+	@echo "${GREEN}DNAfx -> extract loop${NC}"
+	$(SUDO) python3 src/extract_from_loop_wav.py
+
+DNAfx_play:
+	@echo "${GREEN}DNAfx -> play audio${NC}"
+	$(SUDO) python3 src/play_AUX.py
+
 DNAfx_find_bus:
 	@echo "${GREEN}Finding USB device${NC}"
 	$(SUDO) lsusb
