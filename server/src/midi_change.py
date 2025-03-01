@@ -1,28 +1,5 @@
-import usb.core
-import usb.util
-import socket
-
+from ENV import ENV
 from JSON import JSON
-
-VENDOR_ID = 0x0483 
-PRODUCT_ID = 0x5703 
-OUT_ENDPOINT = 0x02
-
-# Find the USB device
-device = usb.core.find(idVendor=VENDOR_ID, idProduct=PRODUCT_ID)
-
-if device is None:
-    raise ValueError("Device not found")
-
-device.reset()
-
-# Detach kernel driver (if active)
-if device.is_kernel_driver_active(0):
-    device.detach_kernel_driver(0)
-
-# Set device configuration
-device.set_configuration()
-
 
 effects = JSON.get_json("effects.json")
 
@@ -31,6 +8,8 @@ def select_effect():
     last_effect = "0"
     while True:
         try:
+            # set an input timeout of 4 second if the user doesn't input anything
+
             effect = input("Enter the index/name to select an effect ('q' to quit, 'h' for help): ")
             if effect.lower() == 'q':
                 print("Exiting...")
