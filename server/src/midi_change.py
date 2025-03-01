@@ -1,6 +1,6 @@
 from ENV import ENV
 from JSON import JSON
-
+import socket
 effects = JSON.get_json("effects.json")
 
 # Listen for outgoing communication and send the selected command
@@ -9,7 +9,6 @@ def select_effect():
     while True:
         try:
             # set an input timeout of 4 second if the user doesn't input anything
-
             effect = input("Enter the index/name to select an effect ('q' to quit, 'h' for help): ")
             if effect.lower() == 'q':
                 print("Exiting...")
