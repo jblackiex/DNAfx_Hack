@@ -4,7 +4,7 @@ import socket
 effects = JSON.get_json("effects.json")
 
 # Listen for outgoing communication and send the selected command
-def select_effect():
+def event_loop():
     last_effect = "0"
     while True:
         try:
