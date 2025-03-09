@@ -1,6 +1,6 @@
 import usb.core
 import usb.util
-from communication_channel import CommunicationChannel
+from server.src.input_channel import CommunicationChannel
 from ENV import ENV
 
 class USBHIDChannel(CommunicationChannel):
@@ -15,7 +15,7 @@ class USBHIDChannel(CommunicationChannel):
 
         # Reset the self.device to ensure it starts in a clean state
         # This is useful for reinitializing the self.device in case it was previously in use
-        self.device.reset()
+        # self.device.reset()
 
         # If the self.device is currently controlled by the OS kernel, detach it
         # This allows our script to take direct control of the USB self.device
@@ -27,7 +27,7 @@ class USBHIDChannel(CommunicationChannel):
         # Necessary before any communication can occur
         self.device.set_configuration()
 
-    def send(self, preset: str) -> None:
+    async def send(self, preset: str) -> None:
         try:
             for _ in range(2): # Send the command twice to respect bInterval of 2ms
                 self.device.write(ENV.get("OUT_ENDPOINT"), preset)
@@ -36,5 +36,5 @@ class USBHIDChannel(CommunicationChannel):
         except usb.core.USBError as e:
             print(f"USB Error: {e}")
     
-    def receive(self) -> str:
+    async def receive(self) -> str:
         return "Received data from USBHID"

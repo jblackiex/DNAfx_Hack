@@ -1,44 +1,36 @@
+import asyncio
 from ENV import ENV
-from communication_channel import CommunicationChannel
-from usbhid_channel import USBHIDChannel
-from socket_channel import SocketChannel
-from gpio_channel import GPIOChannel
-from keyboardinput_channel import KeyboardInputChannel
+from input_channel import CommunicationChannel
+from channel_data import ChannelData
 # import socket
 
 class ChannelManager:
     """
-        Manages communication channels for sending and receiving messages.
+        Manages communication channels for sending and receiving messages. This class acts
+        as the controller of the MVC pattern. It is responsible for managing the communication
+        channels and the data flow between them. It is responsible for sending and receiving
+        messages from different channels. It acts as a bridge between the input and output
+        channels. It can send messages to one channel and receive messages from another channel.
         Examples:
         - send to USB HID, receive from Socket
         - send through GPIO, receive from Keyboard
         - send through USB HID, receive from Keyboard
     """
-    def __init__(self, input_channel: str = "keyboard", output_channel: str = "usbhid"):
-        self.input_channel = self._get_channel(input_channel)
-        self.output_channel = self._get_channel(output_channel)
+    def __init__(self):
+        self.channel_data = ChannelData()
 
-    def _get_channel(self, channel_type: str) -> CommunicationChannel:
-        """Factory method to get the correct channel implementation."""
-        channels = {
-            "USBHID": USBHIDChannel(),
-            "Keyboard": KeyboardInputChannel(),
-            "Socket": SocketChannel(),
-            "GPIO": GPIOChannel()
-        }
-        if channel_type not in channels:
-            raise ValueError(f"Invalid channel type: {channel_type}")
-        return channels[channel_type]
+    async def receive_socket(self):
+        await asyncio.sleep(1.5)
+        self.channel_data.receive_from("Socket")
 
-    def set_channel(self, channel_type: str) -> None:
-        """Changes the current communication channel dynamically."""
-        self.channel = self._get_channel(channel_type)
-        print(f"Channel switched to {channel_type}")
+    async def receive_keyboard(self):
+        await asyncio.sleep(1.5)
+        self.channel_data.receive_from("Keyboard")
 
-    def send_message(self, message: str) -> None:
-        """Sends a message through the current communication channel."""
-        self.output_channel.send(message)
-    
-    def receive_message(self) -> str:
-        """Receives a message from the current communication channel."""
-        return self.input_channel.receive()
+    async def send_usbhid(self):
+        await asyncio.sleep(1.5)
+        data = self.channel_data.get_data()
+
+    async def send_gpio(self):
+        await asyncio.sleep(1.5)
+        data = self.channel_data.get_data()

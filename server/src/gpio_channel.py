@@ -1,4 +1,4 @@
-from communication_channel import CommunicationChannel
+from server.src.input_channel import CommunicationChannel
 
 class GPIOChannel(CommunicationChannel):
     """Implementation of GPIO communication channel."""

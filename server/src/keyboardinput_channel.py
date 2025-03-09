@@ -1,6 +1,6 @@
-from communication_channel import CommunicationChannel
+from server.src.input_channel import CommunicationChannel
 
-class KeyboardInputChannel(CommunicationChannel):
+class KeyboardChannel(CommunicationChannel):
     """Implementation keyboardinput communication channel."""
     
     def send(self, message: str) -> None:

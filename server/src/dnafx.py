@@ -7,16 +7,19 @@ import socket
 from json import JSON
 from ENV import ENV
 from channel_manager import ChannelManager
+from server.src.keyboardinput_channel import KeyboardInputChannel
+from server.src.socket_channel import SocketChannel
+from usbhid_channel import USBHIDChannel
 
 # Listen for outgoing communication and send the selected command
-def event_loop():
+async def output_loop():
     last_preset = "0"
     effects = JSON.get_json("effects.json")
-    IOhub = ChannelManager()
     while True:
         try:
+            message_output = IOhub.receive_message()
+            
             # set an input timeout of 4 second if the user doesn't input anything
-            effect = input("Enter the index/name to select an effect ('q' to quit, 'h' for help): ")
             if effect.lower() == 'q':
                 print("Exiting...")
                 break
@@ -69,20 +72,21 @@ def event_loop():
             break
 
 
-
-
-def main():
+async def main():
     try:
         ENV.init_config()
-        event_loop()
+        IOhub = ChannelManager()
+        await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
     except Exception as e:
         raise e
 
 if __name__ == "__main__":
     try:
-        main()
+        asyncio.run(main())
     except Exception as e:
         error_str = f"Error: {str(e)}" 
         print(error_str)
         logging.error(traceback.format_exc())
         exit(1)
+
+

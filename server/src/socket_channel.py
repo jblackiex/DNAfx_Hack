@@ -1,20 +1,39 @@
 import socket
-from communication_channel import CommunicationChannel
+import asyncio
+from input_channel import InputChannel
 
-class SocketChannel(CommunicationChannel):
+class SocketChannel(InputChannel):
     """Implementation of Socket communication channel."""
-    
-    def __init__(self):
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Allow immediate reuse of the socket
-        
-        # listen for incoming connections on all network interfaces
-        s.bind(('0.0.0.0', 12345))
-        s.listen(10)
-        return "Received data from Socket"        
+    @classmethod
+    async def receive_on(cls, channeldata: list, event_data_received: asyncio.Event) -> None:
+        asyncio.run(cls.server(channeldata, event_data_received))
 
-    def send(self, message: str) -> None:
-        print(f"Sending via Socket: {message}")
-    
-    def receive(self) -> str:
-        return "Received data from Socket"
+    @classmethod
+    async def server(cls, channeldata: list, event_data_received: asyncio.Event) -> None:
+        try:
+            server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            server_socket.setblocking(False)  # no blocking call
+            server_socket.bind(("0.0.0.0", 12345))
+            server_socket.listen(5) # Maximum 5 clients
+
+            loop = asyncio.get_running_loop()
+
+            while True:
+                client_socket, addr = await loop.sock_accept(server_socket)  # no blcoking call
+                print(f"Connected from {addr}")
+                asyncio.create_task(cls.handle_client(client_socket, channeldata, event_data_received))  # handle client in background
+        except Exception as e:
+            raise e
+
+    @classmethod
+    async def handle_client(cls, client_socket, channeldata: list, event_data_received: asyncio.Event) -> None:
+        loop = asyncio.get_running_loop()
+
+        while True:
+            cls.data = await loop.sock_recv(client_socket, 64)  # reading 64 bytes at a time, no blocking call
+            if not cls.data:
+                break
+            channeldata[0] = cls.data
+            event_data_received.set()
+            print("Received Data:", cls.data.decode())
