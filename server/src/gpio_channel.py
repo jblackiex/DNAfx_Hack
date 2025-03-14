@@ -1,10 +1,7 @@
-from server.src.input_channel import CommunicationChannel
+from output_channel import OutputChannel
 
-class GPIOChannel(CommunicationChannel):
+class GPIOChannel(OutputChannel):
     """Implementation of GPIO communication channel."""
     
-    def send(self, message: str) -> None:
-        print(f"Sending via GPIO: {message}")
-    
-    def receive(self) -> str:
-        return "Received data from GPIO"
+    def send(self, command: str, command_name: str) -> None:
+        print(f"Sending via GPIO: {command_name}")

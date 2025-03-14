@@ -2,6 +2,7 @@ import asyncio
 from ENV import ENV
 from input_channel import CommunicationChannel
 from channel_data import ChannelData
+from channel_sender import ChannelSender
 # import socket
 
 class ChannelManager:
@@ -12,12 +13,13 @@ class ChannelManager:
         messages from different channels. It acts as a bridge between the input and output
         channels. It can send messages to one channel and receive messages from another channel.
         Examples:
-        - send to USB HID, receive from Socket
-        - send through GPIO, receive from Keyboard
-        - send through USB HID, receive from Keyboard
+        - receive from Socket, send to USB HID
+        - receive from Keyboard, send through GPIO
+        - receive from Keyboard, send through USB HID
     """
     def __init__(self):
         self.channel_data = ChannelData()
+        self.channel_sender = ChannelSender()
 
     async def receive_socket(self):
         await asyncio.sleep(1.5)
@@ -30,7 +32,9 @@ class ChannelManager:
     async def send_usbhid(self):
         await asyncio.sleep(1.5)
         data = self.channel_data.get_data()
+        self.channel_sender.send_to("USBHID", data)
 
     async def send_gpio(self):
         await asyncio.sleep(1.5)
         data = self.channel_data.get_data()
+        self.channel_sender.send_to("GPIO", data)

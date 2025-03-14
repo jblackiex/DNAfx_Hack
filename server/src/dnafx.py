@@ -26,22 +26,22 @@ async def output_loop():
             if effect.lower() == 'aux':
                 print("Aux mode selected")
                 effect = input("Enter the effect index/name to select: ")
-            if effect.lower() == 's': # Socket mode
-                print("Socket mode selected")
-                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Allow immediate reuse of the socket
-                # s.bind(('192.168.1.18', 12345))
-                s.bind(('0.0.0.0', 12345))
-                s.listen(10)
-                conn, addr = s.accept()
-                print(f"Connection from {addr}")
-                while True:
-                    effect = conn.recv(1024)
-                    if not effect:
-                        break
-                    print(f"Received: {effect.decode()}, length: {len(effect)}")
-                    effect = effect[:-1].decode()
-                    break
+            # if effect.lower() == 's': # Socket mode
+            #     print("Socket mode selected")
+            #     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            #     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Allow immediate reuse of the socket
+            #     # s.bind(('192.168.1.18', 12345))
+            #     s.bind(('0.0.0.0', 12345))
+            #     s.listen(10)
+            #     conn, addr = s.accept()
+            #     print(f"Connection from {addr}")
+            #     while True:
+            #         effect = conn.recv(1024)
+            #         if not effect:
+            #             break
+            #         print(f"Received: {effect.decode()}, length: {len(effect)}")
+            #         effect = effect[:-1].decode()
+            #         break
             if effect == "": # If press enter, select the next effect
                 effect = str(int(last_preset) + 2)
             elif not effect.isdigit() and effect.upper() not in effects:

@@ -34,6 +34,6 @@ class SocketChannel(InputChannel):
             cls.data = await loop.sock_recv(client_socket, 64)  # reading 64 bytes at a time, no blocking call
             if not cls.data:
                 break
-            channeldata[0] = cls.data
+            channeldata[0] = cls.data.decode()
             event_data_received.set()
             print("Received Data:", cls.data.decode())
