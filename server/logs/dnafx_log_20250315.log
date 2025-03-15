@@ -1097,3 +1097,137 @@ Traceback (most recent call last):
     raise(f"Error: {e}")
 TypeError: exceptions must derive from BaseException
 
+2025-03-15 18:18:33,319 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 34, in send
+    self.device.write(ENV.get("OUT_ENDPOINT"), preset)
+  File "/usr/local/lib/python3.10/dist-packages/usb/core.py", line 989, in write
+    return fn(
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 855, in intr_write
+    return self.__write(self.lib.libusb_interrupt_transfer,
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 938, in __write
+    _check(retval)
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 604, in _check
+    raise USBError(_strerror(ret), ret, _libusb_errno[ret])
+usb.core.USBError: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 37, in send_to
+    self.channels["USBHID"].send(effect_command, data.upper())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 38, in send
+    raise ValueError(f"USB Error: {e}")
+ValueError: USB Error: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 72, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 35, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 42, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 18:18:42,597 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 34, in send
+    self.device.write(ENV.get("OUT_ENDPOINT"), preset)
+  File "/usr/local/lib/python3.10/dist-packages/usb/core.py", line 989, in write
+    return fn(
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 855, in intr_write
+    return self.__write(self.lib.libusb_interrupt_transfer,
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 938, in __write
+    _check(retval)
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 604, in _check
+    raise USBError(_strerror(ret), ret, _libusb_errno[ret])
+usb.core.USBError: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 37, in send_to
+    self.channels["USBHID"].send(effect_command, data.upper())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 38, in send
+    raise ValueError(f"USB Error: {e}")
+ValueError: USB Error: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 72, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 35, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 42, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 18:42:24,656 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 15, in send_to
+    self.channels[channel].send(data, data.upper())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 56, in send
+    last_preset[0] = data
+TypeError: 'str' object does not support item assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 72, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 35, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 19, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 18:42:33,984 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 15, in send_to
+    self.channels[channel].send(data, data.upper())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 56, in send
+    last_preset[0] = data
+TypeError: 'str' object does not support item assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 72, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 35, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 19, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+

@@ -2,10 +2,11 @@ import usb.core
 import usb.util
 from output_channel import OutputChannel
 from ENV import ENV
+from JSON import JSON
 
 class USBHIDChannel(OutputChannel):
     """Implementation of USB HID output channel."""
-    
+
     def __init__(self):
         # Find the USB self.device using vendor and product IDs from the environment variables
         self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
@@ -28,11 +29,36 @@ class USBHIDChannel(OutputChannel):
         self.device.set_configuration()
         print(f"USBHID device: {ENV.get('VENDOR_ID')}:{ENV.get('PRODUCT_ID')} found")
 
-    def send(self, preset: str, preset_name: str) -> None:
+    def send(self, data: str, last_preset: list) -> None:
         try:
+            presets = JSON.get_json(ENV.get("DIR_CONFIG") + "/presets.json")
+            if data == "": # If press enter, select the next data
+                if int(last_preset[0]) > 200:
+                    last_preset[0] = "0"
+                data = str(int(last_preset[0]) + 2)
+            elif data == "-":
+                print("Moving to previous preset")
+                if  0 < int(last_preset[0]) < 1:
+                    last_preset[0] = "200"
+                data = str(int(last_preset[0]))
+            elif not data.isdigit() and data.upper() not in presets:
+                if len(data) >= 8 and data[-7:] == f"_add{data[:-3]}":
+                    print(f"Adding new preset {data[:-5]} at pos. n. {data[-1:]}")
+                    presets.update({data[:-7].upper(): presets[str(int(data[:-3]) - 1)]})
+                    JSON.set_json(presets)
+            elif not data.isdigit() and data.upper() in presets:
+                self.device.write(ENV.get("OUT_ENDPOINT"), presets[data.upper()])
+            elif not data.isdigit() or int(data) not in range(1, len(presets)):
+                print("Invalid input. Please enter a valid effect index/name.")
+                return
+            data = str(int(data) - 1)
+            preset_command = presets[data]
+            last_preset[0] = data
+            
+            # SEND PRESET
             for _ in range(2): # Send the command twice to respect bInterval of 2ms
-                self.device.write(ENV.get("OUT_ENDPOINT"), preset)
-            print(f"Successfully sent via USBHID: {preset_name}")
+                self.device.write(ENV.get("OUT_ENDPOINT"), preset_command)
+            print(f"Successfully sent via USBHID: {data.upper()}")
         except usb.core.USBError as e:
             print(f"USB Error: {e}")
             raise ValueError(f"USB Error: {e}")
