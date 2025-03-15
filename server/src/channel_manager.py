@@ -29,11 +29,13 @@ class ChannelManager:
         await self.channel_data.receive_from("Keyboard")
 
     async def send_usbhid(self):
-        await asyncio.sleep(1.5)
-        data = await self.channel_data.get_data()
-        await self.channel_sender.send_to("USBHID", data)
+        while True:
+            await asyncio.sleep(1.5)
+            data = await self.channel_data.get_data()
+            await self.channel_sender.send_to("USBHID", data)
 
     async def send_gpio(self):
-        await asyncio.sleep(1.5)
-        data = await self.channel_data.get_data()
-        await self.channel_sender.send_to("GPIO", data)
+        while True:
+            await asyncio.sleep(1.5)
+            data = await self.channel_data.get_data()
+            await self.channel_sender.send_to("GPIO", data)
