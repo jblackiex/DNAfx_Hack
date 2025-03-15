@@ -10,7 +10,7 @@ class ENV:
             load_dotenv('.env')
             # Set up logging
             log_dir = "logs"
-            log_filename = os.path.join(log_dir, f"script_log_{datetime.now().strftime('%Y%m%d')}.log")
+            log_filename = os.path.join(log_dir, f"dnafx_log_{datetime.now().strftime('%Y%m%d')}.log")
             logging.basicConfig(
                 level=logging.INFO,  # You can set this to DEBUG, INFO, WARNING, ERROR, CRITICAL
                 format='%(asctime)s - %(levelname)s - %(message)s',
@@ -30,4 +30,4 @@ class ENV:
             value = os.getenv(var_name)
             if value is None:
                 raise Exception(f"Error loading {var_name} from .env file")
-        return value
+        return int(value, 16) if var_name == "VENDOR_ID" or var_name == "PRODUCT_ID" or var_name == "OUT_ENDPOINT" else value 

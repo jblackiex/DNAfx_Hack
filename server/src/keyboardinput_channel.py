@@ -14,6 +14,7 @@ class KeyboardChannel(InputChannel):
         await loop.connect_read_pipe(lambda: protocol, sys.stdin)
         
         while True:
+            print("Enter a command: ")
             user_input = await reader.readline()
             user_input = user_input.decode().strip()
             # if user_input.lower() == "exit":  # Exit condition

@@ -1,0 +1,863 @@
+2025-03-15 15:07:29,241 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 32, in get
+    raise Exception(f"Error loading {var_name} from .env file")
+Exception: Error loading VENDOR_ID from .env file
+
+2025-03-15 15:08:23,577 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 32, in get
+    raise Exception(f"Error loading {var_name} from .env file")
+Exception: Error loading VENDOR_ID from .env file
+
+2025-03-15 15:08:50,366 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 32, in get
+    raise Exception(f"Error loading {var_name} from .env file")
+Exception: Error loading VENDOR_ID from .env file
+
+2025-03-15 15:16:08,810 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 32, in get
+    raise Exception(f"Error loading {var_name} from .env file")
+Exception: Error loading VENDOR_ID from .env file
+
+2025-03-15 15:19:39,282 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 32, in get
+    raise Exception(f"Error loading {var_name} from .env file")
+Exception: Error loading VENDOR_ID from .env file
+
+2025-03-15 15:20:52,254 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 33, in get
+    raise Exception(f"Error loading {var_name} from .env file")
+Exception: Error loading VENDOR_ID from .env file
+
+2025-03-15 15:21:09,079 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 14, in __init__
+    raise ValueError(f"{self.device} not found")
+ValueError: None not found
+
+2025-03-15 15:23:44,576 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 14, in __init__
+    raise ValueError(f"{self.device} not found")
+ValueError: None not found
+
+2025-03-15 15:24:40,140 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 28, in get
+    value = os.getenv(var_name, is_hex=True)
+TypeError: getenv() got an unexpected keyword argument 'is_hex'
+
+2025-03-15 15:26:10,900 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 14, in __init__
+    raise ValueError(f"{self.device} not found")
+ValueError: None not found
+
+2025-03-15 15:26:37,286 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 14, in __init__
+    raise ValueError(f"{self.device} not found")
+ValueError: None not found
+
+2025-03-15 15:26:57,993 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 14, in __init__
+    raise ValueError(f"{self.device} not found")
+ValueError: None not found
+
+2025-03-15 15:28:04,449 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 14, in __init__
+    raise ValueError(f"{self.device} not found")
+ValueError: None not found
+
+2025-03-15 15:30:43,122 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 25, in receive_socket
+    await self.channel_data.receive_from("Socket")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 17, in receive_from
+    self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+IndexError: list index out of range
+
+2025-03-15 15:39:00,988 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 25, in receive_socket
+    await self.channel_data.receive_from("Socket")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 17, in receive_from
+    self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+IndexError: list index out of range
+
+2025-03-15 15:39:29,459 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 25, in receive_socket
+    await self.channel_data.receive_from("Socket")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 17, in receive_from
+    self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+IndexError: list index out of range
+
+2025-03-15 15:41:35,996 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 25, in receive_socket
+    await self.channel_data.receive_from("Socket")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 17, in receive_from
+    self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+IndexError: list index out of range
+
+2025-03-15 15:42:22,301 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 25, in receive_socket
+    await self.channel_data.receive_from("Socket")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 17, in receive_from
+    self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+IndexError: list index out of range
+
+2025-03-15 15:43:28,712 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 20, in __init__
+    self.channel_data = ChannelData()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 8, in __init__
+    self.channeldata = list(1)
+TypeError: 'int' object is not iterable
+
+2025-03-15 15:46:30,898 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 25, in receive_socket
+    await self.channel_data.receive_from("Socket")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 18, in receive_from
+    await self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 9, in receive_on
+    asyncio.run(cls.server(channeldata, event_data_received))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 33, in run
+    raise RuntimeError(
+RuntimeError: asyncio.run() cannot be called from a running event loop
+
+2025-03-15 15:49:10,291 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 39, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:16:11,764 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 29, in receive_keyboard
+    await self.channel_data.receive_from("Keyboard")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 18, in receive_from
+    await self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/keyboardinput_channel.py", line 22, in receive_on
+    channeldata[0] = user_input
+TypeError: 'str' object does not support item assignment
+
+2025-03-15 16:17:04,393 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 29, in receive_keyboard
+    await self.channel_data.receive_from("Keyboard")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 18, in receive_from
+    await self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/keyboardinput_channel.py", line 22, in receive_on
+    channeldata[0] = user_input
+TypeError: 'str' object does not support item assignment
+
+2025-03-15 16:17:15,355 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 29, in receive_keyboard
+    await self.channel_data.receive_from("Keyboard")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 18, in receive_from
+    await self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/keyboardinput_channel.py", line 22, in receive_on
+    channeldata[0] = user_input
+TypeError: 'str' object does not support item assignment
+
+2025-03-15 16:17:29,471 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 39, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:18:29,171 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 41, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:19:09,044 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 40, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:20:19,381 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 41, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:20:53,385 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 41, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:21:19,882 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 42, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:21:43,397 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 29, in receive_keyboard
+    await self.channel_data.receive_from("Keyboard")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 18, in receive_from
+    await self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/keyboardinput_channel.py", line 22, in receive_on
+    channeldata[0] = user_input
+TypeError: 'str' object does not support item assignment
+
+2025-03-15 16:32:39,491 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 42, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:32:50,962 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 29, in receive_keyboard
+    await self.channel_data.receive_from("Keyboard")
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_data.py", line 18, in receive_from
+    await self.channels[channel].receive_on(self.channeldata[0], self.event_channeldata_received)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/keyboardinput_channel.py", line 22, in receive_on
+    channeldata[0] = user_input
+TypeError: 'str' object does not support item assignment
+
+2025-03-15 16:33:09,275 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 17, in send_to
+    if int(last_preset) > 200:
+UnboundLocalError: local variable 'last_preset' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 34, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 36, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 16:34:33,932 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 42, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:34:54,772 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 42, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:35:25,428 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 42, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:35:56,437 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 42, in handle_client
+    channeldata[0] = cls.data.decode()
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:39:47,875 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 17, in send_to
+    if int(last_preset) > 200:
+UnboundLocalError: local variable 'last_preset' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 34, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 36, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 16:44:39,094 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 17, in send_to
+    if int(last_preset) > 200:
+UnboundLocalError: local variable 'last_preset' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 34, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 36, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 16:45:15,585 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 42, in handle_client
+    channeldata[0] = [cls.data.decode()]
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:48:20,189 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SocketChannel.handle_client() done, defined at /home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py:31> exception=TypeError("'str' object does not support item assignment")>
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/socket_channel.py", line 42, in handle_client
+    channeldata[0] = [cls.data.decode()]
+TypeError: 'str' object does not support item assignment
+2025-03-15 16:52:02,166 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 20, in send_to
+    elif not data.isdigit() and data.upper() not in presets:
+AttributeError: 'list' object has no attribute 'isdigit'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 76, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 34, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 36, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 17:20:32,709 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 71, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 14, in __init__
+    raise ValueError(f"{self.device} not found")
+ValueError: None not found
+
+2025-03-15 17:24:59,026 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 32, in send_to
+    await self.channels[1].send(effect_command, data.upper())
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 72, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 34, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 36, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 17:38:38,628 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 34, in send
+    self.device.write(ENV.get("OUT_ENDPOINT"), preset)
+  File "/usr/local/lib/python3.10/dist-packages/usb/core.py", line 989, in write
+    return fn(
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 855, in intr_write
+    return self.__write(self.lib.libusb_interrupt_transfer,
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 938, in __write
+    _check(retval)
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 604, in _check
+    raise USBError(_strerror(ret), ret, _libusb_errno[ret])
+usb.core.USBError: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 32, in send_to
+    self.channels["USBHID"].send(effect_command, data.upper())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 38, in send
+    raise ValueError(f"USB Error: {e}")
+ValueError: USB Error: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 72, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 34, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 36, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 17:39:48,095 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 71, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 29, in __init__
+    print(f"USBHID device: {int(ENV.get('VENDOR_ID'), 16)}:{int(ENV.get('PRODUCT_ID'), 16)} found")
+TypeError: int() can't convert non-string with explicit base
+
+2025-03-15 17:40:05,641 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 71, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 29, in __init__
+    print(f"USBHID device: {int(ENV.get('VENDOR_ID'), 16)}:{int(ENV.get('PRODUCT_ID'), 16)} found")
+TypeError: int() can't convert non-string with explicit base
+
+2025-03-15 17:40:34,413 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 34, in send
+    self.device.write(ENV.get("OUT_ENDPOINT"), preset)
+  File "/usr/local/lib/python3.10/dist-packages/usb/core.py", line 989, in write
+    return fn(
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 855, in intr_write
+    return self.__write(self.lib.libusb_interrupt_transfer,
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 938, in __write
+    _check(retval)
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 604, in _check
+    raise USBError(_strerror(ret), ret, _libusb_errno[ret])
+usb.core.USBError: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 32, in send_to
+    self.channels["USBHID"].send(effect_command, data.upper())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 38, in send
+    raise ValueError(f"USB Error: {e}")
+ValueError: USB Error: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 72, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 34, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 36, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+
+2025-03-15 17:43:13,125 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 34, in send
+    self.device.write(ENV.get("OUT_ENDPOINT"), preset)
+  File "/usr/local/lib/python3.10/dist-packages/usb/core.py", line 989, in write
+    return fn(
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 855, in intr_write
+    return self.__write(self.lib.libusb_interrupt_transfer,
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 938, in __write
+    _check(retval)
+  File "/usr/local/lib/python3.10/dist-packages/usb/backend/libusb1.py", line 604, in _check
+    raise USBError(_strerror(ret), ret, _libusb_errno[ret])
+usb.core.USBError: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 32, in send_to
+    await self.channels["USBHID"].send(effect_command, data.upper())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 38, in send
+    raise ValueError(f"USB Error: {e}")
+ValueError: USB Error: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 74, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 72, in main
+    await asyncio.gather(IOhub.receive_socket(), IOhub.receive_keyboard(), IOhub.send_usbhid(), IOhub.send_gpio())
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 34, in send_usbhid
+    await self.channel_sender.send_to("USBHID", data)
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 36, in send_to
+    raise(f"Error: {e}")
+TypeError: exceptions must derive from BaseException
+

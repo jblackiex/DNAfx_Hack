@@ -1,6 +1,5 @@
 import asyncio
 from ENV import ENV
-from input_channel import CommunicationChannel
 from channel_data import ChannelData
 from channel_sender import ChannelSender
 # import socket
@@ -23,18 +22,18 @@ class ChannelManager:
 
     async def receive_socket(self):
         await asyncio.sleep(1.5)
-        self.channel_data.receive_from("Socket")
+        await self.channel_data.receive_from("Socket")
 
     async def receive_keyboard(self):
         await asyncio.sleep(1.5)
-        self.channel_data.receive_from("Keyboard")
+        await self.channel_data.receive_from("Keyboard")
 
     async def send_usbhid(self):
         await asyncio.sleep(1.5)
-        data = self.channel_data.get_data()
-        self.channel_sender.send_to("USBHID", data)
+        data = await self.channel_data.get_data()
+        await self.channel_sender.send_to("USBHID", data)
 
     async def send_gpio(self):
         await asyncio.sleep(1.5)
-        data = self.channel_data.get_data()
-        self.channel_sender.send_to("GPIO", data)
+        data = await self.channel_data.get_data()
+        await self.channel_sender.send_to("GPIO", data)

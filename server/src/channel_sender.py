@@ -29,7 +29,7 @@ class ChannelSender:
                 return
             data = str(int(data) - 1)
             effect_command = presets[data]
-            self.channels[channel].send(effect_command, data.upper())
+            self.channels["USBHID"].send(effect_command, data.upper())
             last_preset = data
         except Exception as e:
             print(f"Error: {e}")

@@ -14,7 +14,7 @@ YELLOW = \033[93m
 
 DNAfx: .venv
 	@echo "${GREEN}DNAfx${END}"
-	$(SUDO) python3 src/midi_change.py
+	$(SUDO) python3 src/dnafx.py
 
 .venv:
 	@if [ ! -d "venv" ]; then python3 -m venv venv; \

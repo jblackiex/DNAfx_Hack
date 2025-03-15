@@ -6,5 +6,5 @@ class OutputChannel(ABC):
     """Abstract base class for input channels."""
 
     @abstractmethod
-    async def send(self, preset: str, preset_name: str) -> None:
+    def send(self, preset: str, preset_name: str) -> None:
         pass

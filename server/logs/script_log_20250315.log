@@ -1,0 +1,42 @@
+2025-03-15 15:04:08,709 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 32, in get
+    raise Exception(f"Error loading {var_name} from .env file")
+Exception: Error loading VENDOR_ID from .env file
+
+2025-03-15 15:06:34,602 - ERROR - Traceback (most recent call last):
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 82, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 78, in main
+    raise e
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/dnafx.py", line 75, in main
+    IOhub = ChannelManager()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_manager.py", line 21, in __init__
+    self.channel_sender = ChannelSender()
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/channel_sender.py", line 9, in __init__
+    "USBHID": USBHIDChannel(),
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/usbhid_channel.py", line 11, in __init__
+    self.device = usb.core.find(idVendor=ENV.get("VENDOR_ID"), idProduct=ENV.get("PRODUCT_ID"))
+  File "/home/nbordoni/Desktop/DNAfx_GiT_CLI/server/src/ENV.py", line 32, in get
+    raise Exception(f"Error loading {var_name} from .env file")
+Exception: Error loading VENDOR_ID from .env file
+

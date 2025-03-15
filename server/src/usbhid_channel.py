@@ -4,7 +4,7 @@ from output_channel import OutputChannel
 from ENV import ENV
 
 class USBHIDChannel(OutputChannel):
-    """Implementation of USB HID communication channel."""
+    """Implementation of USB HID output channel."""
     
     def __init__(self):
         # Find the USB self.device using vendor and product IDs from the environment variables
@@ -26,16 +26,16 @@ class USBHIDChannel(OutputChannel):
         # This sets up endpoints, interfaces, and other communication parameters
         # Necessary before any communication can occur
         self.device.set_configuration()
+        print(f"USBHID device: {ENV.get('VENDOR_ID')}:{ENV.get('PRODUCT_ID')} found")
 
-    async def send(self, preset: str, preset_name: str) -> None:
+    def send(self, preset: str, preset_name: str) -> None:
         try:
             for _ in range(2): # Send the command twice to respect bInterval of 2ms
                 self.device.write(ENV.get("OUT_ENDPOINT"), preset)
-            print(f"Sending via USBHID: {preset_name}")
-            # print(f"Effect {effect} selected")
+            print(f"Successfully sent via USBHID: {preset_name}")
         except usb.core.USBError as e:
             print(f"USB Error: {e}")
             raise ValueError(f"USB Error: {e}")
     
-    async def receive(self) -> str:
-        return "Received data from USBHID"
+    # async def receive(self) -> str:
+    #     return "Received data from USBHID"
