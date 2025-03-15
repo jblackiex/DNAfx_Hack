@@ -17,6 +17,11 @@ class ChannelSender:
                 if int(self.last_preset) > 200:
                     self.last_preset = "0"
                 data = str(int(self.last_preset) + 2)
+            elif data == "-":
+                print("Moving to previous preset")
+                if  0 < int(self.last_preset) < 1:
+                    self.last_preset = "200"
+                data = str(int(self.last_preset))
             elif not data.isdigit() and data.upper() not in presets:
                 if len(data) >= 8 and data[-7:] == f"_add{data[:-3]}":
                     print(f"Adding new preset {data[:-5]} at pos. n. {data[-1:]}")

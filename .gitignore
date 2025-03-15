@@ -1,2 +1,3 @@
 venv/
-logs/
+server/logs/
+server/src/__pycache__/

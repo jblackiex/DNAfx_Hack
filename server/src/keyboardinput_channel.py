@@ -19,6 +19,6 @@ class KeyboardChannel(InputChannel):
             user_input = user_input.decode().strip()
             # if user_input.lower() == "exit":  # Exit condition
             #     break
-            channeldata[0] = user_input
+            channeldata[0] = user_input.strip()
             event_data_received.set()
             print("Received Data:", user_input)
