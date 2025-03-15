@@ -34,7 +34,7 @@ class SocketChannel(InputChannel):
 
         while True:
             print("Receiving data...")
-            cls.data = await loop.sock_recv(client_socket, 64)  # Reading 64 bytes at a time, no blocking call
+            cls.data = await loop.sock_recv(client_socket, 20)  # Reading 64 bytes at a time, no blocking call
             print("Data received:", cls.data.decode())
             if not cls.data.decode():
                 print("No data received." + cls.data.decode())

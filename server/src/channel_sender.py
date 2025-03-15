@@ -31,6 +31,7 @@ class ChannelSender:
             effect_command = presets[data]
             self.channels["USBHID"].send(effect_command, data.upper())
             self.last_preset = data
+            print("Enter a command(name/index) to send: ")
         except Exception as e:
             print(f"Error: {e}")
             raise(f"Error: {e}")
