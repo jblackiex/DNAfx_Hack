@@ -39,6 +39,6 @@ class SocketChannel(InputChannel):
             if not cls.data.decode():
                 print("No data received." + cls.data.decode())
                 break
-            channeldata[0] = [cls.data.decode()]
+            channeldata[0] = cls.data.decode()[:-1]
             print("Data event set:", cls.data.decode())
             event_data_received.set()
