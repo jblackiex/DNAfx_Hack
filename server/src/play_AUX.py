@@ -27,7 +27,7 @@ def analyze_bpm(file_path):
         print(f"An error occurred during BPM analysis: {e}")
         return None, None
 
-def play_wav_file(directory, file_name="audiomass-output.mp3"):
+def play_wav_file(directory, file_name="../audiomass-output.mp3"):
     """
     Plays a .wav file from the specified directory using pygame and analyzes its BPM.
 
