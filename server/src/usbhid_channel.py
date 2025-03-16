@@ -51,7 +51,7 @@ class USBHIDChannel(OutputChannel):
                         JSON.set_json(presets, ENV.get("DIR_CONFIG") + "presets.json")
                         last_preset[0] = str(int(data[-3:]) - 1)
                         return
-                elif not data.isdigit() and data.upper() in presets:
+                elif not data.isdigit() and data.upper() in presets: # "zero" instead of "0" example
                     # SEND PRESET
                     for _ in range(2): # Send the command twice to respect bInterval of 2ms
                         self.device.write(ENV.get("OUT_ENDPOINT"), presets[data.upper()])
