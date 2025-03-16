@@ -19,6 +19,5 @@ class ChannelData:
 
     async def get_data(self) -> str:
         await self.event_channeldata_received.wait()
-        print("Data received (get_data):", self.channeldata[0])
         self.event_channeldata_received.clear()
         return self.channeldata[0]

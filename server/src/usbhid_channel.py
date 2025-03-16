@@ -35,12 +35,13 @@ class USBHIDChannel(OutputChannel):
                 presets = JSON.get_json(ENV.get("DIR_CONFIG") + "presets.json")
                 if data == "":
                     print("Moving to next preset")
-                    if int(last_preset[0]) > 200:
+                    if int(last_preset[0]) >= 199:
                         last_preset[0] = "0"
+                        return
                     data = str(int(last_preset[0]) + 2)
                 elif data == "-":
                     print("Moving to previous preset")
-                    if  0 < int(last_preset[0]) < 1:
+                    if  0 <= int(last_preset[0]) < 1:
                         last_preset[0] = "200"
                     data = str(int(last_preset[0]))
                 elif not data.isdigit() and data.upper() not in presets:
