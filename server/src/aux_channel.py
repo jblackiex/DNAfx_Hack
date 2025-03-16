@@ -6,10 +6,10 @@ class AuxChannel(InputOutputChannel):
     """Implementation of Socket input channel."""
 
     def __init__(self):
-        file_name = "./tracks/audiomass-output.wav"
+        file_name = "./tracks/audiomass-output.mp3"
         
         if not os.path.exists(file_name):
-            print(f"File '{file_name}' not found in directory '../tracks'.")
+            print(f"File '{file_name}' not found in directory './tracks'.")
             return
 
         # Analyze the BPM and number of beats before playback
