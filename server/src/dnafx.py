@@ -80,6 +80,6 @@ if __name__ == "__main__":
         error_str = f"Error: {str(e)}" 
         print(error_str)
         logging.error(traceback.format_exc())
-        exit(1)
+        asyncio.run(main())
 
 

@@ -19,7 +19,7 @@ class JSON:
             raise Exception(f"Error generating JSON file {filename}") from e
 
     @staticmethod
-    def set_json(file_new, filename="../effects.json", indent=4):
+    def set_json(file_new, filename, indent=4):
         try:
             file = open(filename, 'w+', encoding='utf-8') # il + per evitare di usare file.truncate() dopo
             json.dump(file_new, file, indent=indent)
