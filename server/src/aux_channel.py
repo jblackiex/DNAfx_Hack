@@ -41,3 +41,6 @@ class AuxChannel(InputOutputChannel):
         except Exception as e:
             print(f"An error occurred while playing the file: {e}")
 
+    def receive_on(cls, channeldata: list) -> None:
+        pass
+
