@@ -72,6 +72,3 @@ class USBHIDChannel(OutputChannel):
         except usb.core.USBError as e:
             print(f"USB Error: {e}")
             raise ValueError(f"USB Error: {e}")
-    
-    # async def receive(self) -> str:
-    #     return "Received data from USBHID"

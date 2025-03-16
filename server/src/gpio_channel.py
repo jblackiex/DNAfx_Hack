@@ -25,6 +25,6 @@ class GPIOChannel(OutputChannel):
             elif (data == "tunerMODE"):
                 self.looperMODE = False
                 print(f"Sending via GPIO: tunerMODE")
-                os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_BACK')}") # Button left/back dnafx pedal
-                sleep(0.5)
-                os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_BACK')}")
+                os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # Button left/back dnafx pedal
+                sleep(1)
+                os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}")
