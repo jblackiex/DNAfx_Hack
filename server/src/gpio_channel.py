@@ -21,10 +21,15 @@ class GPIOChannel(OutputChannel):
                 # os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_NEXT')}") # stop recording
                 # os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
                 print(f"[Looper] Aux data imported: {aux_data}")
-            elif (data == "playMODE"):
+            elif (data == "playMODE"): # play recording
+                print(f"Sending via GPIO: playMODE")
                 os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # Button left/back dnafx pedal
                 os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}")
-            elif (data == "looperMODE"): # access to looper mode and clear recording
+            elif (data == "stopMODE"): # stop recording
+                print(f"Sending via GPIO: stopMODE")
+                os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_NEXT')}") # Button right/next dnafx pedal
+                os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
+            elif (data == "looperMODE"): # access to looper mode or clear recording
                 print(f"Sending via GPIO: looperMODE")
                 os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_NEXT')}") # Button right/next dnafx pedal
                 sleep(1)

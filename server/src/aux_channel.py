@@ -38,7 +38,7 @@ class AuxChannel(InputOutputChannel):
             os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
             os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
             while pygame.mixer.music.get_busy():
-                pygame.time.Clock().tick(100)
+                pygame.time.Clock().tick(120)
             os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_NEXT')}") # stop recording
             os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
         except Exception as e:
