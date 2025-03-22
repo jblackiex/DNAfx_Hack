@@ -34,12 +34,18 @@ class AuxChannel(InputOutputChannel):
             pygame.mixer.music.play()
                 
                 # Wait for the playback to finish
+            os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
+            os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
             while pygame.mixer.music.get_busy():
-                pygame.time.Clock().tick(10)
-            pygame.mixer.quit()
+                pygame.time.Clock().tick(60)
+            os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_NEXT')}") # stop recording
+            os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
         except Exception as e:
             print(f"An error occurred while playing the file: {e}")
 
     def receive_on(cls, channeldata: list) -> None:
         pass
+
+    def __del__(self):
+        pygame.mixer.quit()
 
