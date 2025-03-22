@@ -34,7 +34,7 @@ class AuxChannel(InputOutputChannel):
                 # Wait for the playback to finish
             while pygame.mixer.music.get_busy():
                 pygame.time.Clock().tick(200)
-            sleep(0.15)
+            sleep(0.14)
             os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_NEXT')}") # stop recording
             os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
             pygame.mixer.quit()
