@@ -26,7 +26,7 @@ class AuxChannel(InputOutputChannel):
             pygame.mixer.init()
             pygame.mixer.music.load(self.file_name)
 
-            sleep(0.5)
+            sleep(0.5) # finish setting up the audio channel.
             pygame.mixer.music.play()
             os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
             os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
