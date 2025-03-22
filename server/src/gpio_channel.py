@@ -7,7 +7,6 @@ from time import sleep
 class GPIOChannel(OutputChannel):
     """Implementation of GPIO output channel."""
     def __init__(self):
-        self.looperMODE = False
         self.aux_channel = AuxChannel()
 
     def send(self, data: str, aux_data: list) -> None:
@@ -15,13 +14,9 @@ class GPIOChannel(OutputChannel):
             if (data == "recMODE"):
                 # now we upload the track and send it via AUX with a time that allows us to stop the recording via GPIO 
                 print(f"Sending via GPIO: recMODE")
-                # os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
-                # os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}")
                 self.aux_channel.send(data, aux_data) # send the track (aux_data) to the aux channel OR reproduce the track via AUX
-                # os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_NEXT')}") # stop recording
-                # os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
                 print(f"[Looper] Aux data imported: {aux_data}")
-            elif (data == "playMODE"): # play recording
+            elif (data == "playMODE"): # play recording if already exists or play/dub the track
                 print(f"Sending via GPIO: playMODE")
                 os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # Button left/back dnafx pedal
                 os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}")
