@@ -1,6 +1,7 @@
 import os
 import pygame
 from input_output_channel import InputOutputChannel
+from ENV import ENV
 
 class AuxChannel(InputOutputChannel):
     """Implementation of Socket input channel."""
