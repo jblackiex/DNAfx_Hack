@@ -18,7 +18,7 @@ if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
-        print("Keyboard interrupt received. Exiting.")
+        print("\rKeyboard interrupt received. Exiting.")
         exit(0)
     except Exception as e:
         error_str = f"Error: {str(e)}" 
