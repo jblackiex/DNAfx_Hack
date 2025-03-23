@@ -35,8 +35,7 @@ class GPIOChannel(OutputChannel):
                 os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
                 print(f"[Looper] looperMODE")
             elif (data == "importMODE"):
-                os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # Button left/back dnafx pedal
-                os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}")
+                self.otg_channel.record_stereo_audio()
             elif (data == "tunerMODE"): # access to tuner mode
                 print(f"Sending via GPIO: tunerMODE")
                 os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # Button left/back dnafx pedal
