@@ -13,7 +13,7 @@ class OtgChannel(InputChannel):
         self.RATE = 44100  # Sampling rate (Hz)
         self.DURATION = 10  # Duration in seconds
         self.CHANNELS = 2  # Number of audio channels (2 for stereo)
-        self.OUTPUT_FILENAME = "./tracks/audiomass-output.mp3"  # Output file name
+        self.OUTPUT_FILENAME = "./tracks/audiomass-output.wav"  # Output file name
 
     def record_stereo_audio(self):
         print(f"Recording {self.CHANNELS}-channel audio (stereo)...")
