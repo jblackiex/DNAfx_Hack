@@ -34,7 +34,7 @@ class GPIOChannel(OutputChannel):
                 sleep(1)
                 os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
                 print(f"[Looper] looperMODE")
-            elif (data == "importMODE"):
+            elif (data == "otgMODE"):
                 self.otg_channel.record_stereo_audio()
             elif (data == "tunerMODE"): # access to tuner mode
                 print(f"Sending via GPIO: tunerMODE")
