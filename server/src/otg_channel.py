@@ -15,9 +15,10 @@ class OtgChannel(InputChannel):
         self.CHANNELS = 2  # Number of audio channels (2 for stereo)
         self.OUTPUT_FILENAME = "./tracks/audiomass-output.wav"  # Output file name
 
-    def record_stereo_audio(self):
+    def export_stereo_audio(self):
         print(f"Recording {self.CHANNELS}-channel audio (stereo)...")
         
+        self.OUTPUT_FILENAME = "./tracks/audiomass-output-GOOD.wav"
         # Record audio
         audio_data = sd.rec(int(self.RATE * self.DURATION), samplerate=self.RATE, channels=self.CHANNELS, dtype='int16')
         sd.wait()  # Wait until recording is finished
