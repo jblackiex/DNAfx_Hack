@@ -20,6 +20,8 @@ class AuxChannel(InputOutputChannel):
                 print(f"File '{self.file_name}' not found in directory './tracks'.")
                 return
     
+            GPIO_PIN_BACK = ENV.get("GPIO_PIN_BACK")
+            GPIO_PIN_NEXT = ENV.get("GPIO_PIN_NEXT")
             # Initialize the pygame mixer
             print(f"Loading '{self.file_name}'...")
 
@@ -28,15 +30,15 @@ class AuxChannel(InputOutputChannel):
 
             sleep(0.5) # finish setting up the audio channel.
             pygame.mixer.music.play()
-            os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
-            os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # start recording
+            os.system(f"sudo gpioget --bias=pull-down gpiochip0 {GPIO_PIN_BACK}") # start recording
+            os.system(f"sudo gpioget --bias=pull-up gpiochip0 {GPIO_PIN_BACK}") # start recording
                 
                 # Wait for the playback to finish
             while pygame.mixer.music.get_busy():
                 pygame.time.Clock().tick(200)
-            sleep(0.133)
-            os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_NEXT')}") # stop recording
-            os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
+            sleep(0.135) # finish setting up the audio channel.
+            os.system(f"sudo gpioget --bias=pull-down gpiochip0 {GPIO_PIN_NEXT}") # stop recording
+            os.system(f"sudo gpioget --bias=pull-up gpiochip0 {GPIO_PIN_NEXT}")
             pygame.mixer.quit()
         except Exception as e:
             print(f"An error occurred while playing the file: {e}")

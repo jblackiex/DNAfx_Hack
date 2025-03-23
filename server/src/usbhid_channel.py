@@ -31,7 +31,7 @@ class USBHIDChannel(OutputChannel):
 
     def send(self, data: str, last_preset: list) -> None:
         try:
-            if ("MODE" not in data):
+            if ("MODE" not in data.upper()):
                 presets = JSON.get_json(ENV.get("DIR_CONFIG") + "presets.json")
                 if data == "":
                     print("Moving to next preset")
