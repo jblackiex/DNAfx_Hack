@@ -41,6 +41,7 @@ class OtgChannel(InputChannel):
         self.RATE, audio_data = read(self.OUTPUT_FILENAME)
         print(f"Audio loaded from {self.OUTPUT_FILENAME}")
         
+        
         GPIO_PIN_BACK = ENV.get("GPIO_PIN_BACK")
         GPIO_PIN_NEXT = ENV.get("GPIO_PIN_NEXT")
 
