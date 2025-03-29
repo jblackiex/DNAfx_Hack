@@ -7,26 +7,22 @@ from ENV import ENV
 class AuxChannel(InputOutputChannel):
     """Implementation of Socket input channel."""
 
-    def __init__(self):
-        self.file_name = "./tracks/audiomass-output.mp3"
-        
-        if not os.path.exists(self.file_name):
-            print(f"File '{self.file_name}' not found in directory './tracks'.")
-            return
-
-    def send(self, preset, last_preset):
+    def send(self, data, aux_data: list) -> None:
         try:
-            if self.file_name == None:
-                print(f"File '{self.file_name}' not found in directory './tracks'.")
+
+            DIR_TRACKS = ENV.get("DIR_TRACKS")
+            data = DIR_TRACKS + data[7:] + ".wav" # data[7:] to remove the prefix "recMODE_"
+            if not os.path.exists(data):
+                print(f"File '{data}' not found in directory './tracks'.")
                 return
-    
+
             GPIO_PIN_BACK = ENV.get("GPIO_PIN_BACK")
             GPIO_PIN_NEXT = ENV.get("GPIO_PIN_NEXT")
             # Initialize the pygame mixer
-            print(f"Loading '{self.file_name}'...")
+            print(f"Loading '{data}'...")
 
             pygame.mixer.init()
-            pygame.mixer.music.load(self.file_name)
+            pygame.mixer.music.load(data)
 
             sleep(0.5) # finish setting up the audio channel.
             pygame.mixer.music.play()
@@ -40,6 +36,7 @@ class AuxChannel(InputOutputChannel):
             os.system(f"sudo gpioget --bias=pull-down gpiochip0 {GPIO_PIN_NEXT}") # stop recording
             os.system(f"sudo gpioget --bias=pull-up gpiochip0 {GPIO_PIN_NEXT}")
             pygame.mixer.quit()
+            aux_data[0] = data
         except Exception as e:
             print(f"An error occurred while playing the file: {e}")
 

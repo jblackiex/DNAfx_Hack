@@ -13,10 +13,9 @@ class GPIOChannel(OutputChannel):
 
     def send(self, data: str, aux_data: list) -> None:
         if (ENV.get("USE_GPIO") == "ON"):
-            if (data == "recMODE"):
-                # now we upload the track and send it via AUX with a time that allows us to stop the recording via GPIO 
+            if ("recMODE" in data): # send the track to Dnafx pedal
                 print(f"Sending via GPIO: recMODE")
-                self.aux_channel.send(data, aux_data) # send the track (aux_data) to the aux channel OR reproduce the track via AUX
+                self.aux_channel.send(data, aux_data) # send the track (aux_data) to the aux channel (reproduce the track via AUX)
                 print(f"[Looper] Aux data imported: {aux_data}")
             elif (data == "playMODE"): # play recording if already exists or play/dub the track
                 print(f"Sending via GPIO: playMODE")
