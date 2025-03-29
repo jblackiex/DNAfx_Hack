@@ -16,7 +16,7 @@ class GPIOChannel(OutputChannel):
             if ("recMODE" in data): # send the track to Dnafx pedal
                 print(f"Sending via GPIO: recMODE")
                 self.aux_channel.send(data, aux_data) # send the track (aux_data) to the aux channel (reproduce the track via AUX)
-                print(f"[Looper] Aux data imported: {aux_data}")
+                print(f"[Looper] Aux data imported: {data}")
             elif (data == "playMODE"): # play recording if already exists or play/dub the track
                 print(f"Sending via GPIO: playMODE")
                 os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # Button left/back dnafx pedal

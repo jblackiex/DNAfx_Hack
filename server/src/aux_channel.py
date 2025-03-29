@@ -11,9 +11,9 @@ class AuxChannel(InputOutputChannel):
         try:
 
             DIR_TRACKS = ENV.get("DIR_TRACKS")
-            data = DIR_TRACKS + data[7:] + ".wav" # data[7:] to remove the prefix "recMODE_"
-            if not os.path.exists(data):
-                print(f"File '{data}' not found in directory './tracks'.")
+            data = DIR_TRACKS + data[8:]
+            if data == "tracks/" or not os.path.exists(data):
+                print(f"File '{data}' not found in directory '{DIR_TRACKS}'.")
                 return
 
             GPIO_PIN_BACK = ENV.get("GPIO_PIN_BACK")
@@ -36,7 +36,7 @@ class AuxChannel(InputOutputChannel):
             os.system(f"sudo gpioget --bias=pull-down gpiochip0 {GPIO_PIN_NEXT}") # stop recording
             os.system(f"sudo gpioget --bias=pull-up gpiochip0 {GPIO_PIN_NEXT}")
             pygame.mixer.quit()
-            aux_data[0] = data
+            # aux_data[0] = data
         except Exception as e:
             print(f"An error occurred while playing the file: {e}")
 

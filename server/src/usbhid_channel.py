@@ -72,3 +72,5 @@ class USBHIDChannel(OutputChannel):
         except usb.core.USBError as e:
             print(f"USB Error: {e}")
             raise ValueError(f"USB Error: {e}")
+        except Exception as e:
+            print(f"An error occurred while sending data: {e}")
