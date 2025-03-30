@@ -59,5 +59,5 @@ class OtgChannel(InputChannel):
     #     os.system(f"sudo gpioget --bias=pull-down gpiochip0 {GPIO_PIN_NEXT}") # stop recording
     #     os.system(f"sudo gpioget --bias=pull-up gpiochip0 {GPIO_PIN_NEXT}")
 
-    # async def receive_on(cls, channeldata: list, event_data_received: asyncio.Event = None) -> None:
-    #     pass
+    async def receive_on(cls, channeldata: list, event_data_received: asyncio.Event = None) -> None:
+        pass
