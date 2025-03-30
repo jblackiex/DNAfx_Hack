@@ -11,7 +11,7 @@ class AuxChannel(InputOutputChannel):
         try:
 
             DIR_TRACKS = ENV.get("DIR_TRACKS")
-            data = DIR_TRACKS + data[8:]
+            data = "./" + DIR_TRACKS + data[8:]
             if data == "tracks/" or not os.path.exists(data):
                 print(f"File '{data}' not found in directory '{DIR_TRACKS}'.")
                 return
@@ -21,7 +21,7 @@ class AuxChannel(InputOutputChannel):
             # Initialize the pygame mixer
             print(f"Loading '{data}'...")
 
-            pygame.mixer.init()
+            pygame.mixer.init() #audiomass-output.mp3
             pygame.mixer.music.load(data)
 
             sleep(0.5) # finish setting up the audio channel.
