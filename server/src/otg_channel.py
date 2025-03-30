@@ -15,13 +15,14 @@ class OtgChannel(InputChannel):
         self.CHANNELS = 2  # Number of audio channels (2 for stereo)
         self.OUTPUT_FILENAME = "./tracks/audiomass-output.wav"  # Output file name
 
-    def export_stereo_audio(self):
+    def export_stereo_audio(self, data: str) -> None:
         print(f"Recording {self.CHANNELS}-channel audio (stereo)...")
         
         os.system(f"sudo gpioget --bias=pull-down gpiochip0 {ENV.get('GPIO_PIN_BACK')}") # Button left/back dnafx pedal
         os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_BACK')}")
 
-        self.OUTPUT_FILENAME = "./tracks/audiomass-output-GOOD.wav"
+        DIR_TRACKS = ENV.get("DIR_TRACKS")
+        self.OUTPUT_FILENAME = "./" + DIR_TRACKS + data[11:]
         # Record audio
         audio_data = sd.rec(int(self.RATE * self.DURATION), samplerate=self.RATE, channels=self.CHANNELS, dtype='int16')
         sd.wait()  # Wait until recording is finished
