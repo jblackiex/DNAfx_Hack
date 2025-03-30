@@ -31,7 +31,8 @@ if __name__ == "__main__":
             tryagain += 1
             print(f"Retrying... ({tryagain}/3)")
             asyncio.run(main())
-        exit(1)
+        else:
+            exit(1)
         # asyncio.run(main())
 
 
