@@ -65,9 +65,6 @@ class USBHIDChannel(OutputChannel):
                 
                 # SEND PRESET
                 self.send_to_dnafx(preset_command, data)
-                # for _ in range(2): # Send the command twice to respect bInterval of 2ms
-                #     self.device.write(ENV.get("OUT_ENDPOINT"), preset_command)
-                # print(f"Successfully sent via USBHID: {data.upper()}")
         except usb.core.USBError as e:
             print(f"USB Error: {e}")
             self.device.reset()
