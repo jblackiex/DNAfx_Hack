@@ -36,8 +36,8 @@ class USBHIDChannel(OutputChannel):
                 if data == "":
                     print("Moving to next preset")
                     if int(last_preset[0]) >= 199:
-                        last_preset[0] = "0"
-                        return
+                        self.device.reset()
+                        last_preset[0] = 0
                     data = str(int(last_preset[0]) + 2)
                 elif data == "-":
                     print("Moving to previous preset")
@@ -53,9 +53,7 @@ class USBHIDChannel(OutputChannel):
                         return
                 elif not data.isdigit() and data.upper() in presets: # "zero" instead of "0" example
                     # SEND PRESET
-                    for _ in range(2): # Send the command twice to respect bInterval of 2ms
-                        self.device.write(ENV.get("OUT_ENDPOINT"), presets[data.upper()])
-                    last_preset[0] = str(int(list(presets.keys()).index(data.upper())) + 1)
+                    self.send_to_dnafx(presets[data.upper()], data)
                     return
                 elif not data.isdigit() or int(data) not in range(1, len(presets)):
                     print("Invalid input. Please enter a valid effect index/name.")
@@ -66,11 +64,20 @@ class USBHIDChannel(OutputChannel):
                 last_preset[0] = data
                 
                 # SEND PRESET
-                for _ in range(2): # Send the command twice to respect bInterval of 2ms
-                    self.device.write(ENV.get("OUT_ENDPOINT"), preset_command)
-                print(f"Successfully sent via USBHID: {data.upper()}")
+                self.send_to_dnafx(preset_command, data)
+                # for _ in range(2): # Send the command twice to respect bInterval of 2ms
+                #     self.device.write(ENV.get("OUT_ENDPOINT"), preset_command)
+                # print(f"Successfully sent via USBHID: {data.upper()}")
         except usb.core.USBError as e:
             print(f"USB Error: {e}")
-            raise ValueError(f"USB Error: {e}")
+            self.device.reset()
+            # raise ValueError(f"USB Error: {e}")
         except Exception as e:
             print(f"An error occurred while sending data: {e}")
+
+
+    def send_to_dnafx(self, preset_command: str, data) -> None:
+        for _ in range(2): # Send the command twice to respect bInterval of 2ms
+            self.device.write(ENV.get("OUT_ENDPOINT"), preset_command)
+
+        print(f"Successfully sent via USBHID: {data.upper()}")

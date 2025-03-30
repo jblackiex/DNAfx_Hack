@@ -4,7 +4,7 @@ from JSON import JSON
 from ENV import ENV
 class ChannelSender:
     def __init__(self):
-        self.last_preset = ["0"]
+        self.last_preset = ["-1"]
         self.channels = {
             "USBHID": USBHIDChannel(),
             "GPIO": GPIOChannel()
