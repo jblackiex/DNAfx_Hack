@@ -35,22 +35,14 @@ class ChannelSender:
         """
 
         if command == "":
-            return "Available commands: \n" + "\n".join([
-                "looperMODE",
-                "auxrecMODE",
-                "tunerMODE",
-                "playMODE",
-                "stopMODE",
-                "otgexpMODE",
-                "add_preset_number",
-                "preset_name",
-                "preset_index"
-            ])
+            return "\n\n".join(
+            f"{cmd}:\n{desc}" for cmd, desc in command_descriptions.items()
+        )
         # Dictionary to hold command descriptions
         command_descriptions = {
             "": "Moves to the next preset. If the last preset is 199, it resets to 0.",
             "-": "Moves to the previous preset. If at 0, wraps around to 200.",
-            "add_preset_number": (
+            "preset_add_number": (
                 "Adds a new preset with the specified name at the given position. "
                 "For example, 'CoolEffect_add150' copies the value of preset 150 "
                 "HOW IT WORKS: CoolEffect_add_15 add a new preset at position 14 "
