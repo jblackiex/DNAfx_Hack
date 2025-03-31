@@ -13,7 +13,7 @@ class OtgChannel(InputChannel):
         self.RATE = 44100  # Sampling rate (Hz)
         self.DURATION = 10  # Duration in seconds
         self.CHANNELS = 2  # Number of audio channels (2 for stereo)
-        self.OUTPUT_FILENAME = "./tracks/audiomass-output.wav"  # Output file name
+        self.OUTPUT_FILENAME = None
 
     def export_stereo_audio(self, data: str) -> None:
         try:
@@ -24,7 +24,19 @@ class OtgChannel(InputChannel):
 
             DIR_TRACKS = ENV.get("DIR_TRACKS")
             self.OUTPUT_FILENAME = "./" + DIR_TRACKS + data[11:]
-            # Record audio
+            
+            # Find the index of the second underscore
+            first_underscore_index = 11
+            second_underscore_index = data.find('_', first_underscore_index + 1)
+
+            # Extract the part after the second underscore
+            number_part = data[second_underscore_index + 1:]
+
+            try:
+                self.DURATION = float(number_part)  # Set the duration based on the extracted number
+            except ValueError:
+                self.DURATION = 10  # Default duration if conversion fails
+
             audio_data = sd.rec(int(self.RATE * self.DURATION), samplerate=self.RATE, channels=self.CHANNELS, dtype='int16')
             sd.wait()  # Wait until recording is finished
             print("Recording complete.")
