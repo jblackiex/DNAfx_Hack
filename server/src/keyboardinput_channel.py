@@ -12,7 +12,7 @@ class KeyboardChannel(InputChannel):
         reader = asyncio.StreamReader()
         protocol = asyncio.StreamReaderProtocol(reader)
         await loop.connect_read_pipe(lambda: protocol, sys.stdin)
-        
+
         while True:
             print("Enter a command: ")
             user_input = await reader.readline()
