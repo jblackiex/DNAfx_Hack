@@ -1,4 +1,3 @@
-from input_channel import InputChannel
 import asyncio
 import sounddevice as sd
 import numpy as np
@@ -6,7 +5,7 @@ from scipy.io.wavfile import write, read
 import os
 from ENV import ENV
 
-class OtgChannel(InputChannel):
+class OtgChannel():
     """Implementation of OTG input channel."""
     def __init__(self):
         # Parameters for recording
@@ -15,7 +14,7 @@ class OtgChannel(InputChannel):
         self.CHANNELS = 2  # Number of audio channels (2 for stereo)
         self.OUTPUT_FILENAME = None
 
-    def export_stereo_audio(self, data: str) -> None:
+    def export_audio_from_dnafx_looper(self, data: str) -> None:
         try:
             print(f"Recording {self.CHANNELS}-channel audio (stereo)...")
             
@@ -49,27 +48,4 @@ class OtgChannel(InputChannel):
             print(f"Audio saved as {self.OUTPUT_FILENAME}")
         except Exception as e:
             print(f"An error occurred while recording audio: {e}")
-
-    # def import_stereo_audio(self):
-    #     print(f"Importing {self.CHANNELS}-channel audio (stereo)...")
-        
-    #     # Load audio from file
-    #     self.RATE, audio_data = read(self.OUTPUT_FILENAME)
-    #     print(f"Audio loaded from {self.OUTPUT_FILENAME}")
-        
-        
-    #     GPIO_PIN_BACK = ENV.get("GPIO_PIN_BACK")
-    #     GPIO_PIN_NEXT = ENV.get("GPIO_PIN_NEXT")
-
-    #     # Play the imported audio
-    #     os.system(f"sudo gpioget --bias=pull-down gpiochip0 {GPIO_PIN_BACK}") # start recording
-    #     os.system(f"sudo gpioget --bias=pull-up gpiochip0 {GPIO_PIN_BACK}") # start recording
-
-    #     sd.play(audio_data, self.RATE)
-    #     sd.wait()
-
-    #     os.system(f"sudo gpioget --bias=pull-down gpiochip0 {GPIO_PIN_NEXT}") # stop recording
-    #     os.system(f"sudo gpioget --bias=pull-up gpiochip0 {GPIO_PIN_NEXT}")
-
-    async def receive_on(cls, channeldata: list, event_data_received: asyncio.Event = None) -> None:
-        pass
+   

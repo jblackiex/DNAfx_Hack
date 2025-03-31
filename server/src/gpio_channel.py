@@ -13,9 +13,9 @@ class GPIOChannel(OutputChannel):
 
     def send(self, data: str, aux_data: list) -> None:
         if (ENV.get("USE_GPIO") == "ON"):
-            if ("recMODE" in data): # send the track to Dnafx pedal
+            if ("auxrecMODE" in data): # send the track to Dnafx pedal
                 print(f"Sending via GPIO: recMODE")
-                self.aux_channel.send(data, aux_data) # send the track (aux_data) to the aux channel (reproduce the track via AUX)
+                self.aux_channel.import_audio_into_dnafx_looper(data) # send the track (aux_data) to the aux channel (reproduce the track via AUX)
                 print(f"[Looper] Aux data imported: {data}")
             elif (data == "playMODE"): # play recording if already exists or play/dub the track
                 print(f"Sending via GPIO: playMODE")
@@ -34,7 +34,7 @@ class GPIOChannel(OutputChannel):
                 os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
                 print(f"[Looper] looperMODE")
             elif ("otgexpMODE" in data):
-                self.otg_channel.export_stereo_audio(data)
+                self.otg_channel.export_audio_from_dnafx_looper(data)
                 print(f"[Looper] Exported stereo audio: {data}")
             elif (data == "tunerMODE"): # access to tuner mode
                 print(f"Sending via GPIO: tunerMODE")

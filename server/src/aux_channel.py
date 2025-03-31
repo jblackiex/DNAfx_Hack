@@ -1,13 +1,12 @@
 import os
 import pygame
 from time import sleep
-from input_output_channel import InputOutputChannel
 from ENV import ENV
 
-class AuxChannel(InputOutputChannel):
+class AuxChannel():
     """Implementation of Socket input channel."""
 
-    def send(self, data, aux_data: list) -> None:
+    def import_audio_into_dnafx_looper(self, data) -> None:
         try:
 
             DIR_TRACKS = ENV.get("DIR_TRACKS")
@@ -36,7 +35,6 @@ class AuxChannel(InputOutputChannel):
             os.system(f"sudo gpioget --bias=pull-down gpiochip0 {GPIO_PIN_NEXT}") # stop recording
             os.system(f"sudo gpioget --bias=pull-up gpiochip0 {GPIO_PIN_NEXT}")
             pygame.mixer.quit()
-            # aux_data[0] = data
         except Exception as e:
             print(f"An error occurred while playing the file: {e}")
 
