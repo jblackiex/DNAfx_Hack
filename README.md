@@ -46,8 +46,7 @@ If you choose to [create the external circuit](#how-to-build-the-external-circui
 <a name="how-it-works"></a>
 ## How it works? ⚙️
 
-![DNAfx_Hack.svg](DNAfx_Hack%201b831ef5b6c7809baa76c494069a73df/DNAfx_Hack.svg)
-
+[![DNAfx_Hack.svg](DNAfx_Hack%201b831ef5b6c7809baa76c494069a73df/DNAfx_Hack.svg)](https://lucid.app/lucidchart/801ec904-747f-40c8-86a8-fbb14ffee57e/view?page=0_0&invitationId=inv_92bd5a81-6f77-4953-a02e-ab45b900d2ef)
 (CLICK the diagram to open it full screen and zoom in)
 
 I put **`server/`** on my Raspberry Pi and with `make` I run a python script that start listening for keyboard inputs and socket data. As long as your Raspberry Pi and mobile device are on the same network, just retrieve the Raspberry Pi's IP address and use it to connect via the `Dnafx Android` app.
