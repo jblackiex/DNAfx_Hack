@@ -29,16 +29,18 @@ If you choose to [create the external circuit](https://www.notion.so/DNAfx_Hack-
 - Store them externally (on Raspberry Pi)
 - And **load/import them on demand**, just like you'd load a sound preset on a synth or amp.
 
-## **📜 Index**
+## 📜 Index
 
-- [**How it works? ⚙️**](https://www.notion.so/DNAfx_Hack-1b831ef5b6c7809baa76c494069a73df?pvs=21)
-- [**How to Build the External Circuit ⚡🔌**](https://www.notion.so/DNAfx_Hack-1b831ef5b6c7809baa76c494069a73df?pvs=21)
-- [**Setup and Run 🛠️ 🏃🏼‍♂️**](https://www.notion.so/DNAfx_Hack-1b831ef5b6c7809baa76c494069a73df?pvs=21)
-- [**Environment Configuration (.env file) 🧭**](https://www.notion.so/DNAfx_Hack-1b831ef5b6c7809baa76c494069a73df?pvs=21)
-- [**Running ✅**](https://www.notion.so/DNAfx_Hack-1b831ef5b6c7809baa76c494069a73df?pvs=21)
-- [**Contributing 🤝**](https://www.notion.so/DNAfx_Hack-1b831ef5b6c7809baa76c494069a73df?pvs=21)
-- [**Other DNAfx-related project 🧩**](https://www.notion.so/DNAfx_Hack-1b831ef5b6c7809baa76c494069a73df?pvs=21)
-- [**Disclaimer**⚠️](https://www.notion.so/DNAfx_Hack-1b831ef5b6c7809baa76c494069a73df?pvs=21)
+- [**How it works? ⚙️**](#how-it-works-)
+- [**How to Build the External Circuit ⚡🔌**](#how-to-build-the-external-circuit-)
+- [**Setup and Run 🛠️ 🏃🏼‍♂️**](#setup-and-run-)
+- [**Environment Configuration (.env file) 🧭**](#environment-configuration-env-file-)
+- [**Running ✅**](#running-)
+- [**Contributing 🤝**](#contributing-)
+- [**Other DNAfx-related project 🧩**](#other-dnafx-related-project-)
+- [**Disclaimer ⚠️**](#disclaimer)
+
+
 
 ---
 
