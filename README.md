@@ -204,7 +204,7 @@ Be sure to use **insulating material** to avoid contact between the Raspberry Pi
 
 ### 🎫 Bonus: 3D-Printed Backplate
 
-To make all of this accessible and upgradable, I asked my friend **Pino** to design and 3D-print a **custom back panel** for the DNAfx GiT pedal. This makes it easy to maintain the internal hardware and expand functionalities in the future, without needing to open up or rewire the entire unit.
+To make all of this accessible and upgradable, I asked my friend **Pino** to design and 3D-print a **custom back panel** for the DNAfx GiT pedal. This makes it easy to maintain the internal hardware and expand functionalities in the future, without needing to open up or rewire the entire unit --> [CLICK for printing instructions](https://makerworld.com/en/models/1266893-cover-harley-benton-dnafx-git?from=search#profileId-1292803)
 
 ![image.png](DNAfx_Hack%201b831ef5b6c7809baa76c494069a73df/image.png)
 
@@ -215,6 +215,7 @@ To make all of this accessible and upgradable, I asked my friend **Pino** to des
 ![image.png](DNAfx_Hack%201b831ef5b6c7809baa76c494069a73df/image%203.png)
 
 ![image.png](DNAfx_Hack%201b831ef5b6c7809baa76c494069a73df/image%204.png)
+
 
 - **Sending via GPIO:**
     
