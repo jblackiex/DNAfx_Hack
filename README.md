@@ -23,7 +23,7 @@ Here's what this **`new functionality`** enables:
 - 📲 **Remote control support**: using the Android app and the client-server architecture I've built, you can trigger the import remotely.
 - 🔁 **Creative freedom**: build a library of loops and call them up as needed, opening up more complex live or studio applications.
 
-If you choose to [create the external circuit](#how-it-works) you're basically turning the looper into a **preset system for loops**, which is a huge step forward in functionality:
+If you choose to [create the external circuit](#how-to-build-the-external-circuit-) you're basically turning the looper into a **preset system for loops**, which is a huge step forward in functionality:
 
 - You can **prepare loops ahead of time** (like presets)
 - Store them externally (on Raspberry Pi)
