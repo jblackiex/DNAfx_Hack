@@ -31,7 +31,7 @@ If you choose to [create the external circuit](https://www.notion.so/DNAfx_Hack-
 
 ## 📜 Index
 
-- [**How it works? ⚙️**](#how-it-works-)
+- [**How it works? ⚙️**](#how-it-works)
 - [**How to Build the External Circuit ⚡🔌**](#how-to-build-the-external-circuit-)
 - [**Setup and Run 🛠️ 🏃🏼‍♂️**](#setup-and-run)
 - [**Environment Configuration (.env file) 🧭**](#environment-configuration-env-file-)
@@ -43,7 +43,7 @@ If you choose to [create the external circuit](https://www.notion.so/DNAfx_Hack-
 
 
 ---
-
+<a name="how-it-works"></a>
 ## How it works? ⚙️
 
 ![DNAfx_Hack.svg](DNAfx_Hack%201b831ef5b6c7809baa76c494069a73df/DNAfx_Hack.svg)
@@ -81,7 +81,6 @@ To view the full schematic, [open this image in a new tab: **DNAfx_Hack.svg**.](
 
 As shown, the diagram lists all components required to build the external circuit and extend your DNAfx pedal's capabilities.
 
-<a name="disclamer"></a>
 ### ⚠️ Disclaimer
 
 > I'm not a professional electronics engineer — I'm just a passionate developer who's new to electronics. This was my first time designing and building a circuit from scratch, so it may not follow all best practices. I’m not responsible for any potential damage to your device. That said, I tested everything carefully and it works great for my use case. Feedback and suggestions from more experienced makers are always welcome!
@@ -552,7 +551,7 @@ Once your PR is reviewed and approved, it’ll be merged into the main branch. �
 - DNAfx GiT Advanced (untested)
 
 ---
-
+<a name="disclaimer"></a>
 ## **Disclaimer**⚠️
 
 This project is neither affiliated with nor endorsed by Harley Benton. It does not intend to replace or compete with the official editor. The tool was developed out of personal necessity and is shared in the hope that others may find it useful and contribute to its development.
