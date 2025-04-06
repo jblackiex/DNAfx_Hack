@@ -48,6 +48,8 @@ If you choose to [create the external circuit](https://www.notion.so/DNAfx_Hack-
 
 (Right click: “open image in a new tab”. It is in SVG format, zoom on it)
 
+[https://lucid.app/lucidchart/801ec904-747f-40c8-86a8-fbb14ffee57e/view](https://lucid.app/lucidchart/801ec904-747f-40c8-86a8-fbb14ffee57e/view)
+
 I put **`server/`** on my Raspberry Pi and with `make` I run a python script that start listening for keyboard inputs and socket data. As long as your Raspberry Pi and mobile device are on the same network, just retrieve the Raspberry Pi's IP address and use it to connect via the `Dnafx Android` app.
 
 The app is very simple: tap “+” to create a new string command (available commands are listed below), and use “prev” and “next” to switch presets. You can connect your Raspberry Pi to the network either via Ethernet or a Wi-Fi adapter (see the SVG diagram above). If you're using a Wi-Fi adapter, make sure to install the necessary drivers.
