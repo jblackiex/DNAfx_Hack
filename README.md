@@ -38,7 +38,7 @@ If you choose to [create the external circuit](https://www.notion.so/DNAfx_Hack-
 - [**Running ✅**](#running-)
 - [**Contributing 🤝**](#contributing-)
 - [**Other DNAfx-related project 🧩**](#other-dnafx-related-project-)
-- [**Disclaimer ⚠️**](#disclaimer-)
+- [**Disclaimer ⚠️**](#disclaimer)
 
 
 
@@ -81,6 +81,7 @@ To view the full schematic, [open this image in a new tab: **DNAfx_Hack.svg**.](
 
 As shown, the diagram lists all components required to build the external circuit and extend your DNAfx pedal's capabilities.
 
+<a name="disclamer"></a>
 ### ⚠️ Disclaimer
 
 > I'm not a professional electronics engineer — I'm just a passionate developer who's new to electronics. This was my first time designing and building a circuit from scratch, so it may not follow all best practices. I’m not responsible for any potential damage to your device. That said, I tested everything carefully and it works great for my use case. Feedback and suggestions from more experienced makers are always welcome!
@@ -322,7 +323,7 @@ async def main():
 ```
 
 ---
-
+<a name="setup-and-run"></a>
 ## Setup and Run 🛠️ 🏃🏼‍♂️
 
 Before running the script using `make`, ensure your system is properly configured with the necessary dependencies and permissions. Follow the steps below:
