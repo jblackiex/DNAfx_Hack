@@ -33,12 +33,12 @@ If you choose to [create the external circuit](https://www.notion.so/DNAfx_Hack-
 
 - [**How it works? ⚙️**](#how-it-works-)
 - [**How to Build the External Circuit ⚡🔌**](#how-to-build-the-external-circuit-)
-- [**Setup and Run 🛠️ 🏃🏼‍♂️**](#setup-and-run-)
+- [**Setup and Run 🛠️ 🏃🏼‍♂️**](#setup-and-run)
 - [**Environment Configuration (.env file) 🧭**](#environment-configuration-env-file-)
 - [**Running ✅**](#running-)
 - [**Contributing 🤝**](#contributing-)
 - [**Other DNAfx-related project 🧩**](#other-dnafx-related-project-)
-- [**Disclaimer ⚠️**](#disclaimer)
+- [**Disclaimer ⚠️**](#disclaimer-)
 
 
 
