@@ -2,9 +2,9 @@
 
 `Dnafx_Hack` is an open source project designed for the Harley Benton DNAfx GiT series of guitar pedals:
 
-- DNAfx GiT (TESTED!)
-- DNAfx GiT Core (untested)
-- DNAfx GiT Advanced (untested)
+- [DNAfx GiT (TESTED!)](https://harleybenton.com/product/dnafx-git/)
+- [DNAfx GiT Core (untested)](https://harleybenton.com/product/dnafx-git-core/)
+- [DNAfx GiT Advanced (untested)](https://harleybenton.com/product/dnafx-git-advanced/)
 
 I wanted to switch presets on my DNAfx GiT guitar pedal via PC but unfortunately I have Linux. Harley Benton gives you a decent Windows program but I have Linux (again) AND it doesn’t allow you to control Tuner and Looper functionalities; AND I also wanted to import previous recorded looper audio tracks into the Looper: If you are jamming on a “just recorded” cool looper track and electricity goes off, you lost your track forever as the pedal doesn’t store audio tracks in memory and you won’t be able to jam again on that recording.
 
@@ -544,9 +544,9 @@ Once your PR is reviewed and approved, it’ll be merged into the main branch. �
 
 `dnafx-editor` is an open-source, experimental editor designed for the Harley Benton DNAfx GiT series of guitar pedals, including:
 
-- DNAfx GiT Core
-- DNAfx GiT (untested)
-- DNAfx GiT Advanced (untested)
+- [DNAfx GiT (TESTED!)](https://harleybenton.com/product/dnafx-git/)
+- [DNAfx GiT Core (untested)](https://harleybenton.com/product/dnafx-git-core/)
+- [DNAfx GiT Advanced (untested)](https://harleybenton.com/product/dnafx-git-advanced/)
 
 ---
 <a name="disclaimer"></a>
