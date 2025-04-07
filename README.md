@@ -304,7 +304,7 @@ def command_help(command):
         }
 
         description = command_descriptions.get(command, "Command not found. Please enter a valid command.")
-        return description4
+        return description
 ```
 
 **If you need an additional input interface**, **like using bluetooth** (see [Pi Zero Bluetooth](https://blog.lminiero.it/pi0w-presenter/?fbclid=PAY2xjawJfNOFleHRuA2FlbQIxMAABpwG1ZwjnOslaYd8kpbVkqNmILpbvqgtQUHoVWpu9klXLu9QSVi1UMl7yJFcA_aem__IGH7WDIXMpb1Etn1CUWYw)) instead of wifi/ethernet connection, just implement the **`InputChannel`** interface, instantiate a new object inside `ChannelManager()` and add a new coroutine here (`dnafx.py`):

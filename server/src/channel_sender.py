@@ -45,7 +45,7 @@ class ChannelSender:
             "preset_add_number": (
                 "Adds a new preset with the specified name at the given position. "
                 "For example, 'CoolEffect_add150' copies the value of preset 150 "
-                "HOW IT WORKS: CoolEffect_add_15 add a new preset at position 14 "
+                "HOW IT WORKS: CoolEffect_add_15 add a 'CoolEffect' preset at position 14 "
             ),
             "preset_name": (
                 "Sends a preset by name if it exists in the list. For example, 'FLANGER' "
