@@ -12,8 +12,10 @@ class ChannelSender:
 
     async def send_to(self, channel: str, data: str) -> None:
         try:
-            if "help" in data:
-                print(self.command_help(data.split(" ")[1])) # example: help looperMODE
+            if data.strip().startswith("help"):
+                parts = data.strip().split(" ")
+                command = parts[1] if len(parts) > 1 else ""  # "" mostra tutti i comandi
+                print(self.command_help(command))
                 return
             self.channels[channel].send(data, self.last_preset)
             print("Enter a command(name/index) to send: ")
@@ -21,7 +23,7 @@ class ChannelSender:
             print(f"Error: {e}")
             raise(f"Error: {e}")
     
-    def command_help(command):
+    def command_help(self, command):
         """
         Provides a description of the specified command.
 
@@ -34,13 +36,9 @@ class ChannelSender:
         if command is empty, it will print the list of all commands
         """
 
-        if command == "":
-            return "\n\n".join(
-            f"{cmd}:\n{desc}" for cmd, desc in command_descriptions.items()
-        )
         # Dictionary to hold command descriptions
         command_descriptions = {
-            "": "Moves to the next preset. If the last preset is 199, it resets to 0.",
+            "''": "Moves to the next preset. If the last preset is 199, it resets to 0.",
             "-": "Moves to the previous preset. If at 0, wraps around to 200.",
             "preset_add_number": (
                 "Adds a new preset with the specified name at the given position. "
@@ -81,6 +79,11 @@ class ChannelSender:
                 "HOW IT WORKS: otgexpMODE_newrec.wav_3 → create a new track ./tracks/newrec.wav 3 seconds long."
             ),
         }
+
+        if command == "":
+            return "\n\n".join(
+            f">>>{cmd}<<<:\n~~{desc}" for cmd, desc in command_descriptions.items()
+        )
 
         description = command_descriptions.get(command, "Command not found. Please enter a valid command.")
         return description
