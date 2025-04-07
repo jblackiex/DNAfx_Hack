@@ -44,7 +44,8 @@ class OtgChannel():
             os.system(f"sudo gpioget --bias=pull-up gpiochip0 {ENV.get('GPIO_PIN_NEXT')}")
 
             # Save as WAV file
-            write(self.OUTPUT_FILENAME, self.RATE, audio_data)
+            filename = data[11:second_underscore_index]
+            write(filename, self.RATE, audio_data)
             print(f"Audio saved as {self.OUTPUT_FILENAME}")
         except Exception as e:
             print(f"An error occurred while recording audio: {e}")
