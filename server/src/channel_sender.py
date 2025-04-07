@@ -85,5 +85,7 @@ class ChannelSender:
             f">>>{cmd}<<<:\n~~{desc}" for cmd, desc in command_descriptions.items()
         )
 
-        description = command_descriptions.get(command, "Command not found. Please enter a valid command.")
-        return description
+        if command in command_descriptions:
+            return f">>>{command}<<<:\n~~{command_descriptions[command]}"
+        else:
+            return f"???{command}???:\nCommand not found. Please enter a valid command."

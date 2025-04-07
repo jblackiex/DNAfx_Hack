@@ -27,7 +27,7 @@ class USBHIDChannel(OutputChannel):
         # This sets up endpoints, interfaces, and other communication parameters
         # Necessary before any communication can occur
         self.device.set_configuration()
-        print(f"USBHID device: {ENV.get('VENDOR_ID')}:{ENV.get('PRODUCT_ID')} found")
+        print(f"USBHID device: {hex(ENV.get('VENDOR_ID'))}:{hex(ENV.get('PRODUCT_ID'))} found")
 
     def send(self, data: str, last_preset: list) -> None:
         try:
