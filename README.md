@@ -336,9 +336,8 @@ sudo apt-get update && sudo apt-get upgrade
 Install required development tools and audio libraries:
 
 ```bash
-sudo apt-get install llvm-dev clang
 sudo apt-get install libportaudio2 libportaudiocpp0 portaudio19-dev
-sudo apt-get install ****python3.11-venv
+sudo apt-get install ffmpeg
 ```
 
 Update and upgrade again just to ensure everything is fresh:
@@ -353,6 +352,7 @@ Install the Python package used for managing environment variables:
 
 ```bash
 sudo pip3 install python-dotenv
+sudo apt-get install python3.11-venv
 ```
 
 ### 3. **GPIO Support**
@@ -364,7 +364,7 @@ sudo apt install gpiod
 
 ```
 
-Reinstall LLVM and Clang just to ensure all required headers and tools are present:
+Install LLVM and Clang just to ensure all required headers and tools are present:
 
 ```bash
 sudo apt install llvm llvm-dev clang
@@ -389,7 +389,7 @@ gpio=17,27=ip,pu
 
 🔧 **Explanation:**
 
-This line configures GPIO pins 17 and 27 (change it if you use different pins) as input (`ip`) with pull-down resistors (`pu`). This ensures the pins default to a known highstate (`1`) when you are not sending commands that activate them, which helps avoid unexpected behavior or false triggering of scripts listening to those pins.
+This line configures GPIO pins 17 and 27 (change it if you use different pins) as input (`ip`) with pull-down resistors (`pu`). This ensures the pins default to a known highstate (`1`) when you are not sending commands that activate them, which helps avoid unexpected behavior or false triggering of script working with those pins.
 
 This line configures GPIO pins **17 and 27** as **inputs** (`ip`) with **pull-up resistors** (`pu`). That means when nothing is connected to those pins, they will default to a known **high state (1)**.
 
@@ -481,6 +481,7 @@ GPIO_PIN_BACK="17"
 ## Running ✅
 
 Once everything is installed and configured, you can run the script using:
+ATTENTION: **Make sure you connected first the USB cable to the pedal and then the power supply to the pedal.**
 
 ```bash
 make

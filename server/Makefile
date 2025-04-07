@@ -22,18 +22,6 @@ DNAfx: .venv
 		venv/bin/pip install -r requirements.txt; \
 	fi
 
-
-
-
-
-# DNAfx_extract_from_loop_wav:
-# 	@echo "${GREEN}DNAfx -> extract loop${END}"
-# 	$(SUDO) python3 src/extract_from_loop_wav.py
-
-# DNAfx_play:
-# 	@echo "${GREEN}DNAfx -> play audio${END}"
-# 	$(SUDO) python3 src/play_AUX.py
-
 find_bus:
 	@echo "${GREEN}Finding USB devices${END}"
 	@echo "${YELLOW} You Must create a VENDOR_ID && PRODUCT_ID variable in .env file and assign values:${END}"
