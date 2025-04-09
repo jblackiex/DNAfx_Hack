@@ -242,7 +242,7 @@ To make all of this accessible and upgradable, I asked my friend **Pino** to des
 You can get the **complete list of available commands** typing `help <command>`  with your keyboard once you execute the script:
 
 ```python
-def command_help(command):
+def command_help(self, command):
         """
         Provides a description of the specified command.
 
@@ -255,13 +255,9 @@ def command_help(command):
         if command is empty, it will print the list of all commands
         """
 
-        if command == "":
-            return "\n\n".join(
-            f"{cmd}:\n{desc}" for cmd, desc in command_descriptions.items()
-        )
         # Dictionary to hold command descriptions
         command_descriptions = {
-            "": "Moves to the next preset. If the last preset is 199, it resets to 0.",
+            "''": "Moves to the next preset. If the last preset is 199, it resets to 0.",
             "-": "Moves to the previous preset. If at 0, wraps around to 200.",
             "preset_add_number": (
                 "Adds a new preset with the specified name at the given position. "
@@ -303,8 +299,15 @@ def command_help(command):
             ),
         }
 
-        description = command_descriptions.get(command, "Command not found. Please enter a valid command.")
-        return description
+        if command == "":
+            return "\n\n".join(
+            f">>>{cmd}<<<:\n~~{desc}" for cmd, desc in command_descriptions.items()
+        )
+
+        if command in command_descriptions:
+            return f">>>{command}<<<:\n~~{command_descriptions[command]}"
+        else:
+            return f"???{command}???:\nCommand not found. Please enter a valid command."
 ```
 
 **If you need an additional input interface**, **like using bluetooth** (see [Pi Zero Bluetooth](https://blog.lminiero.it/pi0w-presenter/?fbclid=PAY2xjawJfNOFleHRuA2FlbQIxMAABpwG1ZwjnOslaYd8kpbVkqNmILpbvqgtQUHoVWpu9klXLu9QSVi1UMl7yJFcA_aem__IGH7WDIXMpb1Etn1CUWYw)) instead of wifi/ethernet connection, just implement the **`InputChannel`** interface, instantiate a new object inside `ChannelManager()` and add a new coroutine here (`dnafx.py`):
@@ -393,7 +396,7 @@ This line configures GPIO pins 17 and 27 (change it if you use different pins) a
 
 This line configures GPIO pins **17 and 27** as **inputs** (`ip`) with **pull-up resistors** (`pu`). That means when nothing is connected to those pins, they will default to a known **high state (1)**.
 
-This is important because your setup uses **relays that are normally open (NO)**, and are **activated by a low signal (0)**. By defaulting the GPIO pins to **high**, we ensure that the relays stay **inactive** when the Raspberry Pi boots or when the pins are left floating — preventing any **unwanted activation**.
+This is important because this setup uses **relays that are normally open (NO)**, and are **activated by a low signal (0)**. By defaulting the GPIO pins to **high**, we ensure that the relays stay **inactive** when the Raspberry Pi boots or when the pins are left floating — preventing any **unwanted activation**.
 
 🧠 Why this matters:
 
