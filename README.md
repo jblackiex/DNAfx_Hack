@@ -236,7 +236,7 @@ To make all of this accessible and upgradable, I asked my friend **Pino** to des
     - `USE_GPIO` **must be `"ON"` in .env file** for any GPIO-based command to work.
     - `"recMODE"` **only works if** `looperMODE` **is active**.
     - GPIO signals are toggled with `gpioget`, using **pull-down** (press) and **pull-up** (release).
-    - `“otgexpMODE_<filename.wav>_<secondstorec>”` **only works** if OTG cable is plugged in.
+    - `“otgexpMODE_<filename.wav>_<secondstorec>”` **only works** ⚠️ if OTG cable is plugged in AND aux cable is unplugged !!! ⚠️
     - `"auxrecMODE_<file.wav>”` **only works** if AUX cable is plugged in.
 
 You can get the **complete list of available commands** typing `help <command>`  with your keyboard once you execute the script:
@@ -266,11 +266,11 @@ def command_help(self, command):
             ),
             "preset_name": (
                 "Sends a preset by name if it exists in the list. For example, 'FLANGER' "
-                "HOW IT WORKS: 'FLANGER' preset and activates it."
+                "HOW IT WORKS: type 'FLANGER' and go to 'FLANGER' preset."
             ),
             "preset_index": (
                 "Sends a preset by its numerical index. Must be within the valid range. "
-                "HOW IT WORKS: '15' activates the preset stored at index 14."
+                "HOW IT WORKS: '15' activates the preset number 15."
             ),
             "looperMODE": (
                 "Activates Looper Mode or clears the current recording. This allows you "
@@ -281,6 +281,7 @@ def command_help(self, command):
                 "then stops recording. For example, 'auxrecMODE_rec1.wav' records the 'rec1.wav' "
                 "file into the looper. The track will be available at './tracks/rec1.wav'."
                 "HOW IT WORKS: auxrecMODE_file.wav → import on dnafx track ./tracks/track.wav."
+                "IMPORTANT: The file must be in the './tracks/' directory AND aux cable must be connected."
             ),
             "tunerMODE": "Activates Tuner Mode, enabling you to tune your instrument.",
             "playMODE": (
@@ -296,6 +297,7 @@ def command_help(self, command):
                 "In Looper Mode, plays the audio and uses an OTG cable to export it. Ensure that "
                 "an OTG cable is connected for this function to work properly."
                 "HOW IT WORKS: otgexpMODE_newrec.wav_3 → create a new track ./tracks/newrec.wav 3 seconds long."
+                "IMPORTANT: The file must be in the './tracks/' directory AND OTG cable must be connected AND aux cable must be disconnected."
             ),
         }
 

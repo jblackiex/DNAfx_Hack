@@ -45,7 +45,7 @@ class OtgChannel():
 
             # Save as WAV file
             filename = data[11:second_underscore_index]
-            write(filename, self.RATE, audio_data)
+            write(DIR_TRACKS + filename, self.RATE, audio_data)
             print(f"Audio saved as {self.OUTPUT_FILENAME}")
         except Exception as e:
             print(f"An error occurred while recording audio: {e}")
