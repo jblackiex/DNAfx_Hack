@@ -10,7 +10,7 @@ class AuxChannel():
         try:
 
             DIR_TRACKS = ENV.get("DIR_TRACKS")
-            data = "./" + DIR_TRACKS + data[8:]
+            data = "./" + DIR_TRACKS + data[11:]
             if data == "tracks/" or not os.path.exists(data):
                 print(f"File '{data}' not found in directory '{DIR_TRACKS}'.")
                 return

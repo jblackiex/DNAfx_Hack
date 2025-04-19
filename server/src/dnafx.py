@@ -26,10 +26,10 @@ if __name__ == "__main__":
         error_str = f"Error: {str(e)}" 
         print(error_str)
         logging.error(traceback.format_exc())
-        if tryagain < 3:
+        if tryagain < 10:
             sleep(2)
             tryagain += 1
-            print(f"Retrying... ({tryagain}/3)")
+            print(f"Retrying... ({tryagain}/10)")
             asyncio.run(main())
         else:
             exit(1)
