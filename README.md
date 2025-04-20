@@ -551,7 +551,7 @@ Once your PR is reviewed and approved, itâ€™ll be merged into the main branch. ð
 `dnafx-editor` is an open-source, experimental editor designed for the Harley Benton DNAfx GiT series of guitar pedals, including:
 
 - [DNAfx GiT (TESTED!)](https://harleybenton.com/product/dnafx-git/)
-- [DNAfx GiT Core (untested)](https://harleybenton.com/product/dnafx-git-core/)
+- [DNAfx GiT Core (TESTED!)](https://harleybenton.com/product/dnafx-git-core/)
 - [DNAfx GiT Advanced (untested)](https://harleybenton.com/product/dnafx-git-advanced/)
 
 ---
