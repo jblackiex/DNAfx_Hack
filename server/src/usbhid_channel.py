@@ -53,7 +53,8 @@ class USBHIDChannel(OutputChannel):
                         return
                 elif not data.isdigit() and data.upper() in presets: # "zero" instead of "0" example
                     # SEND PRESET
-                    self.send_to_dnafx(presets[data.upper()], data)
+                    preset_command = presets[data.upper()]
+                    self.send_to_dnafx(preset_command, data)
                     return
                 elif not data.isdigit() or int(data) not in range(1, len(presets)):
                     print("Invalid input. Please enter a valid effect index/name.")
